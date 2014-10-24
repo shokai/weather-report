@@ -5,7 +5,7 @@ module WeatherReport
     attr_reader :date, :telop, :temperature_min, :temperature_max
 
     def initialize(forecasts, dateLabel)
-      @forecast = forecast(forecasts, dateLabel)
+      @forecast = forecast(forecasts, dateLabel) || {}
     end    
 
     # @return [Boolean] return true if it rains.
